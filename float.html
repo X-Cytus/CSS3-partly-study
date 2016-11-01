@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float</title>
+</head>
+<body>
+<style type="text/css">
+	.box-set {
+  		background: #e8eae9;
+  		<!overflow: auto;用overflow的方法解决>
+	
+	}
+.box {
+		  background: #8ec63f;
+		  height: 100px;
+		  float: left;
+		  margin: 10px;
+		  width: 200px;
+	}	
+	<!
+	.box-set:before,
+	.box-set:after {
+	  content: "";
+	  display: table;
+	}
+	.box-set:after {
+	  clear: both;
+	}
+	.box-set {
+	  *zoom: 1;
+	}
+	使用clearfix的方法进行清楚浮动
+	>
+</style>
+	<div class="box-set"><!实际效果box-set的height变成了0>
+	  <div class="box">Box 1</div>
+	  <div class="box">Box 2</div>
+	  <div class="box">Box 3</div>
+	  <br style="clear: both;"><!此时解决了该问题>
+	</div>	
+
+</body>
+</html>
